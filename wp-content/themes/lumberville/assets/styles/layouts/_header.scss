@@ -1,4 +1,18 @@
 header {
+  padding: 15px 0px;
+  background: $light-tan;
+
+  a {
+    float: left;
+  }
+
+  img {
+    height: 39px;
+  }
+  ul {
+    float: right;
+  }
+
   li {
     float: left;
 
@@ -7,6 +21,10 @@ header {
       font-weight: bold;
       text-transform: uppercase;
     }
+  }
+
+  li:not(:last-child) {
+    border-right: 2px solid $dark-tan;
   }
 }
 

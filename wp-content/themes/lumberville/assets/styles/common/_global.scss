@@ -1,5 +1,11 @@
 html {
   background: $light-tan;
+  background-image:
+  url('/wp-content/themes/lumberville/assets/images/texture.png');
+}
+
+body {
+  background: none;
 }
 
 h1 {
