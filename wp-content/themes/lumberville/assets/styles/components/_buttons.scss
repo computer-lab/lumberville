@@ -1,0 +1,19 @@
+.button {
+  border: 2px solid $brown;
+  padding: $padding-unit/2 $padding-unit;
+  color: $brown;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: $brown;
+  text-decoration: none;
+}
+
+.social-link {
+  color: $brown;
+
+  .fa.fa-inverse {
+    color: $light-tan;
+  }
+}

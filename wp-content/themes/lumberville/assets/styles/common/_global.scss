@@ -11,3 +11,36 @@ body {
 h1 {
   font-family: "brandon-grotesque";
 }
+
+h4 {
+  color: $brown;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bordered {
+  border: 2px solid $dark-tan;
+  padding: $padding-unit $padding-unit;
+}
+
+.info {
+  background-color: $dark-tan;
+  padding: $padding-unit $padding-unit;
+
+  img {
+    margin-bottom: $padding-unit;
+  }
+
+}
+
+.flex {
+  display: flex;
+}
+
+.h-centered {
+  margin: auto;
+}
+
+.slider {
+  max-width: 100%;
+}

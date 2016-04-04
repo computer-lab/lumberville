@@ -1,0 +1,21 @@
+footer {
+  margin-top: 3.0 * $padding-unit;
+  padding: 1.5* $padding-unit $padding-unit;
+  background: $light-tan;
+}
+
+footer {
+  position: relative;
+}
+
+
+$icon-height: 55px;
+
+.logo-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: - $icon-height / 2;
+  height: $icon-height;
+}
+
