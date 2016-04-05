@@ -4,11 +4,26 @@
     <img src="<?= wp_upload_dir()['url'] ; ?>/lgs-type.png">
   </a>
     <nav class="nav-primary">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#menu">Menu</a>
+        </li>
+        <li>
+          <a href="#events">Events</a>
+        </li>
+        <li>
+          <a href="#lgs">LGS</a>
+        </li>
+        <li>
+          <a href="#merchandise">Merch</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>

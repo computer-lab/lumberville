@@ -19,6 +19,14 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        // Bind to the click of all links with a #hash in the href
+        $('a[href^="#"]').click(function(e) {
+          // Prevent the jump and the #hash from appearing on the address bar
+          e.preventDefault();
+          // Scroll the window, stop any previous animation, stop on user manual scroll
+          // Check https://github.com/flesler/jquery.scrollTo for more customizability
+          $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -33,7 +41,7 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
-    // About us page, note the change from about-us to about_us.
+      // About us page, note the change from about-us to about_us.
     'about_us': {
       init: function() {
         // JavaScript to be fired on the about us page

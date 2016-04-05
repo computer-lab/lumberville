@@ -1,3 +1,4 @@
+$menu-height: 39px;
 header {
   padding: $padding-unit 0px;
   background: $light-tan;
@@ -11,15 +12,28 @@ header {
   }
   ul {
     float: right;
+    height: $menu-height;
+    list-style-type: none;
+    margin-bottom: 0px;
   }
 
   li {
     float: left;
+    height: 100%;
+   
 
     a {
       color: $brown;
       font-weight: bold;
       text-transform: uppercase;
+      line-height: $menu-height;
+      text-align: center;
+      width: 100px;
+    }
+
+    a:hover, a:focus {
+      text-decoration: none;
+      color: $brown;
     }
   }
 

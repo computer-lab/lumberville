@@ -193,7 +193,7 @@
   </div>
 </section>
 <!-- CONTACT  -->
-<section class="bg-brown">
+<section id="contact" class="bg-brown">
   <div class="container">
     <div class="row">
       <div class="col-xs-4">
