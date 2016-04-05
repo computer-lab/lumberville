@@ -4,7 +4,7 @@
  */
 ?>
 <!-- HOME -->
-<section class="container">
+<section id="home" class="container">
   <div class="row">
     <div class="col-xs-8 bordered">
       <img class="slider" src="<?= wp_upload_dir()['url'] ; ?>/slider-filler-1.jpg">
@@ -16,23 +16,46 @@
         <h4>Visit Us</h4>
         <?= the_field('contact_info') ?>
       </div>
-      
-      <div class="flex">
-        <a href="/index.php/menu" class="h-centered">
-          <img src="<?= wp_upload_dir()['url'] ; ?>/view-menu.png">
-        </a>
-      </div>
+      <a href="/index.php/menu" class="center-block">
+        <img class="center-block" src="<?= wp_upload_dir()['url'] ; ?>/view-menu.png">
+      </a>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
       <img class="pull-left" src="<?= wp_upload_dir()['url'] ; ?>/newsletter.png">
       <a class="button pull-left" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up Now</a>
+      <div class="pull-right">
+        <a href="#" class="social-link">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-inverse fa-stack-1x"></i>
+          </span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-inverse fa-stack-1x"></i>
+          </span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-google-plus fa-inverse fa-stack-1x"></i>
+          </span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-inverse fa-stack-1x"></i>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 <!-- MENU -->
-<section class="bg-brown">
+<section id="menu" class="bg-brown">
   <div class="container">
     <div class="row">
       <div class="col-xs-5">
@@ -100,11 +123,11 @@
 </section>
 <!-- EVENTS -->
 <div class="bg-banner" style="background-image: url('<?= wp_upload_dir()['url'] ; ?>/banner-filler.jpg');"></div>
-<section class="container">
+<section id="events" class="container">
 <div class="row">
   <div class="col-xs-12">
-    <img src="<?= wp_upload_dir()['url'] ; ?>/events.png">
-    <p>Events blurb.</p>
+    <img class="center-block text-image" src="<?= wp_upload_dir()['url'] ; ?>/events.png">
+    <p class="text-center">Events blurb.</p>
   </div>
 </div>
 <div class="row">
@@ -113,12 +136,10 @@
   </div>
   <div class="col-xs-5">
     <h4>Book A Party</h4>
-    <p>Party blurb</p>
-  </div>
-</div>
+    <p>Party blurb</p> </div> </div>
 </section>
 <!-- LGS -->
-<section class="bg-dark-tan">
+<section id="lgs" class="bg-dark-tan">
   <div class="container">
     <div class="row">
       <div class="col-xs-4">
@@ -139,11 +160,11 @@
 </section>
 <!-- MERCHANDISE  -->
 <div class="bg-banner" style="background-image: url('<?= wp_upload_dir()['url'] ; ?>/banner-filler.jpg');"></div>
-<section class="container">
+<section id="merchandise" class="container">
   <div class="row">
     <div class="col-xs-12">
-      <img src="<?= wp_upload_dir()['url'] ; ?>/merch.png">
-      <p>Merch blurb.</p>
+      <img class="center-block text-image" src="<?= wp_upload_dir()['url'] ; ?>/merch.png">
+      <p class="text-center">Merch blurb.</p>
       <ul>
         <li>Merch</li>
         <li>Merch</li>
@@ -156,8 +177,8 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <img src="<?= wp_upload_dir()['url'] ; ?>/local-goods.png">
-      <p>Goods blurb.</p>
+      <img class="center-block text-image" src="<?= wp_upload_dir()['url'] ; ?>/local-goods.png">
+      <p class="text-center">Goods blurb.</p>
       <ul>
         <li>Goods</li>
         <li>Goods</li>

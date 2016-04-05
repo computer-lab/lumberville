@@ -1,3 +1,5 @@
+/* Layout */
+
 html {
   background: $light-tan;
   background-image: url('/wp-content/themes/lumberville/assets/images/texture.png');
@@ -20,6 +22,10 @@ section {
   background: $brown;
   background-image: url('/wp-content/themes/lumberville/assets/images/texture.png');
   color: $light-tan;
+
+  h4 {
+    color: $light-tan;
+  }
 }
 
 .bg-dark-tan {
@@ -27,17 +33,28 @@ section {
   background-image: url('/wp-content/themes/lumberville/assets/images/texture.png');
 }
 
-
 .bg-banner {
-  height: 50 * $padding-unit;
+  height: 40 * $padding-unit;
   background-size: cover;
   background-position: center;
 }
 
+/* Typography */
+
 h4 {
   font-weight: bold;
   text-transform: uppercase;
+  color: $brown;
 }
+
+p {
+  font-size: 1.3em;
+}
+
+.text-image {
+  margin-bottom: $padding-unit;
+}
+
 
 .bordered {
   border: 2px solid $dark-tan;
@@ -51,16 +68,9 @@ h4 {
   img {
     margin-bottom: $padding-unit;
   }
-
 }
 
-.flex {
-  display: flex;
-}
-
-.h-centered {
-  margin: auto;
-}
+/* Images */
 
 .slider {
   max-width: 100%;
