@@ -12,6 +12,10 @@ section {
   padding: 4 * $padding-unit 0px;
 }
 
+.row {
+  padding: 2 * $padding-unit 0px;
+}
+
 .bg-brown {
   background: $brown;
   background-image: url('/wp-content/themes/lumberville/assets/images/texture.png');
@@ -21,6 +25,13 @@ section {
 .bg-dark-tan {
   background: $dark-tan;
   background-image: url('/wp-content/themes/lumberville/assets/images/texture.png');
+}
+
+
+.bg-banner {
+  height: 50 * $padding-unit;
+  background-size: cover;
+  background-position: center;
 }
 
 h4 {

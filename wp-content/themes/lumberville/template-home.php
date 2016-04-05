@@ -99,11 +99,7 @@
   </div>
 </section>
 <!-- EVENTS -->
-<div class="row">
-  <div class="col-xs-12">
-    <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/banner-filler.jpg">
-  </div>
-</div>
+<div class="bg-banner" style="background-image: url('<?= wp_upload_dir()['url'] ; ?>/banner-filler.jpg');"></div>
 <section class="container">
 <div class="row">
   <div class="col-xs-12">
@@ -142,11 +138,7 @@
   </div>
 </section>
 <!-- MERCHANDISE  -->
-<div class="row">
-  <div class="col-xs-12">
-    <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/banner-filler.jpg">
-  </div>
-</div>
+<div class="bg-banner" style="background-image: url('<?= wp_upload_dir()['url'] ; ?>/banner-filler.jpg');"></div>
 <section class="container">
   <div class="row">
     <div class="col-xs-12">
