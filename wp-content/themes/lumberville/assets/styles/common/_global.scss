@@ -1,7 +1,6 @@
 html {
   background: $light-tan;
-  background-image:
-  url('/wp-content/themes/lumberville/assets/images/texture.png');
+  background-image: url('/wp-content/themes/lumberville/assets/images/texture.png');
 }
 
 body {
@@ -9,11 +8,22 @@ body {
   font-family: "brandon-grotesque";
 }
 
-h1 {
+section {
+  padding: 4 * $padding-unit 0px;
+}
+
+.bg-brown {
+  background: $brown;
+  background-image: url('/wp-content/themes/lumberville/assets/images/texture.png');
+  color: $light-tan;
+}
+
+.bg-dark-tan {
+  background: $dark-tan;
+  background-image: url('/wp-content/themes/lumberville/assets/images/texture.png');
 }
 
 h4 {
-  color: $brown;
   font-weight: bold;
   text-transform: uppercase;
 }
