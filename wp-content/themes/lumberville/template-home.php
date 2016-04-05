@@ -147,9 +147,9 @@
     <div class="row">
       <div class="col-xs-4">
         <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/history.png">
-        <a class="button pull-left" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up Now</a>
-        <a class="button pull-left" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up Now</a>
-        <a class="button pull-left" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up Now</a>
+        <a class="button active" href="#">History</a>
+        <a class="button" href="#">Pedestrian Bridge</a>
+        <a class="button" href="#">Pedestrian Bridge</a>
       </div>
       <div class="col-xs-8">
         <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/lgs-filler.jpg">
