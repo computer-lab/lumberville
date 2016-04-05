@@ -13,6 +13,7 @@
       <div class="info">
         <img src="<?= wp_upload_dir()['url'] ; ?>/welcome.png">
         <?= the_field('home_blurb') ?>
+        <br>
         <h4>Visit Us</h4>
         <?= the_field('contact_info') ?>
       </div>
@@ -22,29 +23,31 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">
-      <img class="pull-left" src="<?= wp_upload_dir()['url'] ; ?>/newsletter.png">
-      <a class="button pull-left" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up Now</a>
+    <div class="col-xs-6 flex">
+      <img class="pull-left v-center" src="<?= wp_upload_dir()['url'] ; ?>/newsletter.png">
+      <a class="button pull-left active" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up</a>
+    </div>
+    <div class="col-xs-6">
       <div class="pull-right">
-        <a href="#" class="social-link">
+        <a href="#" class="social-link fa-lg">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-facebook fa-inverse fa-stack-1x"></i>
           </span>
         </a>
-        <a href="#" class="social-link">
+        <a href="#" class="social-link fa-lg">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-twitter fa-inverse fa-stack-1x"></i>
           </span>
         </a>
-        <a href="#" class="social-link">
+        <a href="#" class="social-link fa-lg">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-google-plus fa-inverse fa-stack-1x"></i>
           </span>
         </a>
-        <a href="#" class="social-link">
+        <a href="#" class="social-link fa-lg">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-instagram fa-inverse fa-stack-1x"></i>
@@ -59,10 +62,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-5">
-        <img class="slider" src="<?= wp_upload_dir()['url'] ; ?>/local-natural.png">
+        <img class="img-responsive text-image" src="<?= wp_upload_dir()['url'] ; ?>/local-natural.png">
         <img class="slider" src="<?= wp_upload_dir()['url'] ; ?>/menu-filler-1.jpg">
         <h4>Lunch</h4>
-        <h6>Served 11:30 am - 3:00 pm</h6>
+        <h5>Served 11:30 am - 3:00 pm</h5>
         <p>Lunch copy lorem ipsum</p>
       </div>
       <div class="col-xs-7">
@@ -83,23 +86,23 @@
         </ul>
         <ul>
           <li>
-            <h6>Health Kick - 7.95</h6>
+            <h5>Health Kick - 7.95</h5>
             <p>Lorem ipsum dolor grandola topped with Greek yogurt.</p>
           </li>
           <li>
-            <h6>Health Kick - 7.95</h6>
+            <h5>Health Kick - 7.95</h5>
             <p>Lorem ipsum dolor grandola topped with Greek yogurt.</p>
           </li>
           <li>
-            <h6>Health Kick - 7.95</h6>
+            <h5>Health Kick - 7.95</h5>
             <p>Lorem ipsum dolor grandola topped with Greek yogurt.</p>
           </li>
           <li>
-            <h6>Health Kick - 7.95</h6>
+            <h5>Health Kick - 7.95</h5>
             <p>Lorem ipsum dolor grandola topped with Greek yogurt.</p>
           </li>
           <li>
-            <h6>Health Kick - 7.95</h6>
+            <h5>Health Kick - 7.95</h5>
             <p>Lorem ipsum dolor grandola topped with Greek yogurt.</p>
           </li>
         </ul>
@@ -196,7 +199,7 @@
       <div class="col-xs-4">
         <img src="<?= wp_upload_dir()['url'] ; ?>/contact.png">
         <?= the_field('contact_info') ?>
-        <h6>Hours</h6>
+        <h5>Hours</h5>
         <p>Hours blurb</p>
       </div>
       <div class="col-xs-8">

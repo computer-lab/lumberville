@@ -1,3 +1,14 @@
+/* Util */
+
+.flex {
+  display: flex;
+}
+
+.v-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 /* Layout */
 
 html {
@@ -45,6 +56,11 @@ h4 {
   font-weight: bold;
   text-transform: uppercase;
   color: $brown;
+}
+
+h5 {
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
 p {
