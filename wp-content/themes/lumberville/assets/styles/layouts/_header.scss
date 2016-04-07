@@ -3,32 +3,47 @@ header {
   padding: $padding-unit 0px;
   background: $light-tan;
 
-  a {
-    float: left;
+  .small-menu {
+    img {
+      height: $menu-height;
+    }
+    ul {
+      height: $menu-height;
+    }
   }
 
-  img {
-    height: 39px;
+  .large-menu {
+    img {
+      height: $menu-height * 3;
+    }
+
+    li {
+      margin-top: $menu-height;
+    }
+
+    ul {
+      height: $menu-height * 3;
+    }
   }
+
+
   ul {
-    float: right;
-    height: $menu-height;
     list-style-type: none;
     margin-bottom: 0px;
+    padding: 0px 0px;
   }
 
   li {
-    float: left;
-    height: 100%;
-   
+    width: 100px;
+    display: inline-block;
 
     a {
       color: $brown;
       font-weight: bold;
       text-transform: uppercase;
-      line-height: $menu-height;
       text-align: center;
-      width: 100px;
+      line-height: $menu-height;
+      display: block;
     }
 
     a:hover, a:focus {

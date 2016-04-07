@@ -111,12 +111,10 @@
     <hr>
     <div class="row">
       <div class="col-xs-4">
-        <h4>Dinners To Go</h4>
-        <p>Lorem ipsum</p>
+        <?= the_field('menu_highlight_1') ?>
       </div>
       <div class="col-xs-4">
-        <h4>Daily Specials</h4>
-        <p>Lorem ipsum</p>
+        <?= the_field('menu_highlight_2') ?>
       </div>
       <div class="col-xs-4">
        <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/lgs-otroyb.png">
@@ -130,7 +128,9 @@
 <div class="row">
   <div class="col-xs-12">
     <img class="center-block text-image" src="<?= wp_upload_dir()['url'] ; ?>/events.png">
-    <p class="text-center">Events blurb.</p>
+      <div class="text-center">
+        <?= the_field('events_blurb') ?>
+      </div>
   </div>
 </div>
 <div class="row">
@@ -167,7 +167,9 @@
   <div class="row">
     <div class="col-xs-12">
       <img class="center-block text-image" src="<?= wp_upload_dir()['url'] ; ?>/merch.png">
-      <p class="text-center">Merch blurb.</p>
+      <div class="text-center">
+        <?= the_field('merchandise_blurb') ?>
+      </div>
       <ul>
         <li>Merch</li>
         <li>Merch</li>
@@ -181,7 +183,9 @@
   <div class="row">
     <div class="col-xs-12">
       <img class="center-block text-image" src="<?= wp_upload_dir()['url'] ; ?>/local-goods.png">
-      <p class="text-center">Goods blurb.</p>
+      <div class="text-center">
+        <?= the_field('goods_blurb') ?>
+      </div>
       <ul>
         <li>Goods</li>
         <li>Goods</li>
@@ -198,12 +202,13 @@
     <div class="row">
       <div class="col-xs-4">
         <img src="<?= wp_upload_dir()['url'] ; ?>/contact.png">
+        <br>
+        <br>
         <?= the_field('contact_info') ?>
-        <h5>Hours</h5>
-        <p>Hours blurb</p>
+        <?= the_field('hours') ?>
       </div>
       <div class="col-xs-8">
-        <p>Map</p>
+        <?= the_field('location') ?>
       </div>
     </div>
     <div class="row">
