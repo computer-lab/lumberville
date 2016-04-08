@@ -86,22 +86,22 @@
       <div class="col-xs-4">
         <img class="img-responsive text-image" src="<?= wp_upload_dir()['url'] ; ?>/local-natural.png">
         <div class="menu-blurbs">
-          <div  id="bean-and-leaf">
+          <div id="bean-and-leaf-blurb">
             <?= the_field('bean_and_leaf_menu_blurb') ?>
           </div>
-          <div id="breakfast">
+          <div id="breakfast-blurb">
             <?= the_field('breakfast_menu_blurb') ?>
           </div>
-          <div id="lunch">
+          <div id="lunch-blurb">
             <?= the_field('lunch_menu_blurb') ?>
           </div>
-          <div id="treats">
+          <div id="treats-blurb">
             <?= the_field('treats_menu_blurb') ?>
           </div>
-          <div id="gluten-free">
+          <div id="gluten-free-blurb">
             <?= the_field('gluten_free_menu_blurb') ?>
           </div>
-          <div id="supper-club">
+          <div id="supper-club-blurb">
             <?= the_field('supper_club_menu_blurb') ?>
           </div>
         </div>
@@ -138,24 +138,26 @@
 
             foreach($menus as $menu):
           ?>
-            <div class="flex">
-              <ul class="submenu-selector center-block" role="tablist">
-                <?php foreach(get_field($menu . '_submenus') as $i=>$row): ?>
-                <li role="presentation" class="<?= $i == 0 ? 'active': '' ?>">
-                  <a href="#<?= $menu ?>-<?= $i ?>" data-toggle="tab">
-                    <?= $row['submenu_name'] ?>
-                  </a>
-                </li>
-                <?php endforeach; ?>
-              </ul>
-            </div>
-            <div class="flex">
-              <div class="tab-content content-block">
-                <?php foreach(get_field($menu . '_submenus') as $i=>$row): ?>
-                <div role="tabpanel" class="tab-pane <?= $i == 0 ? 'active': '' ?>" id="<?= $menu ?>-<?= $i ?>">
-                  <?= $row['submenu_content'] ?>
+            <div id="<?= $menu ?>">
+              <div class="flex">
+                <ul class="submenu-selector center-block" role="tablist">
+                  <?php foreach(get_field($menu . '_submenus') as $i=>$row): ?>
+                  <li role="presentation" class="<?= $i == 0 ? 'active': '' ?>">
+                    <a href="#<?= $menu ?>-<?= $i ?>" data-toggle="tab">
+                      <?= $row['submenu_name'] ?>
+                    </a>
+                  </li>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
+              <div class="flex">
+                <div class="tab-content content-block">
+                  <?php foreach(get_field($menu . '_submenus') as $i=>$row): ?>
+                  <div role="tabpanel" class="tab-pane <?= $i == 0 ? 'active': '' ?>" id="<?= $menu ?>-<?= $i ?>">
+                    <?= $row['submenu_content'] ?>
+                  </div>
+                  <?php endforeach; ?>
                 </div>
-                <?php endforeach; ?>
               </div>
             </div>
           <?php endforeach; ?>
