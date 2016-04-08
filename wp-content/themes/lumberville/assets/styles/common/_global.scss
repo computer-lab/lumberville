@@ -115,7 +115,6 @@ a:hover, a:focus {
 /* Menus */
 
 .menu-selector {
-
   a {
     display: block;
     text-align: center;
@@ -126,11 +125,10 @@ a:hover, a:focus {
     font-size: 1.2em;
   }
 
-   a.active {
-      color: $brown;
-      background: $light-tan;
-
-    }
+  a.active {
+    color: $brown;
+    background: $light-tan;
+  }
 
   a:hover, a:focus {
     text-decoration: none;
@@ -143,12 +141,11 @@ a:hover, a:focus {
   div div {
     padding: 0px 0px;
     box-shadow: 
-      2px 0 0 0 $light-tan, 
-      0 2px 0 0 $light-tan, 
-      2px 2px 0 0 $light-tan,   /* Just to fix the corner */
-      2px 0 0 0 $light-tan inset, 
-      0 2px 0 0 $light-tan inset;
-
+    2px 0 0 0 $light-tan, 
+    0 2px 0 0 $light-tan, 
+    2px 2px 0 0 $light-tan,   /* Just to fix the corner */
+    2px 0 0 0 $light-tan inset, 
+    0 2px 0 0 $light-tan inset;
   }
 }
 
@@ -166,7 +163,11 @@ a:hover, a:focus {
   .active {
     font-weight: bold;
   }
+}
 
+.menu-blurbs img {
+  border: 2px solid $light-tan;
+  padding: $padding-unit / 2;
 }
 
 .menu-blurbs > div {
@@ -175,4 +176,26 @@ a:hover, a:focus {
 
 .menus > div {
   display: none;
+}
+
+
+/* Events */
+
+
+/* History */
+
+#lgs ul[role='tablist'] {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: $padding-unit * 2;
+
+  li {
+    margin: $padding-unit 0px;
+  }
+
+  a {
+    margin-left: 0px;
+
+  }
+
 }

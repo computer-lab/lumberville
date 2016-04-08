@@ -11,7 +11,7 @@
   display: block;
 }
 
-.button.active {
+.button.active, .active .button {
   color: $light-tan;
   background-color: $green;
   border: 2px solid $green;

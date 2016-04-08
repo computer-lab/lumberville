@@ -206,17 +206,44 @@
     <div class="row">
       <div class="col-xs-4">
         <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/history.png">
-        <a class="button active" href="#">History</a>
-        <a class="button" href="#">Pedestrian Bridge</a>
-        <a class="button" href="#">Pedestrian Bridge</a>
+        <ul role="tablist">
+          <li role="presentation" class="active">
+            <a href="#history" class="button" role="tab" data-toggle="tab">History</a>
+          </li>
+          <li role="presentation">
+            <a href="#pedestrian-bridge" role="tab" class="button" data-toggle="tab">Pedestrian Bridge</a>
+          </li>
+          <li role="presentation">
+            <a href="#canal-and-towpath" role="tab" class="button"
+              data-toggle="tab">Canal & Towpath</a>
+          </li>
+          <li role="presentation">
+            <a href="#black-bass-hotel" role="tab" class="button"
+              data-toggle="tab">The Black Bass Hotel</a>
+          </li>
+        </ul>
       </div>
       <div class="col-xs-8">
-        <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/lgs-filler.jpg">
-        <h4>History</h4>
-        <p>Blurb</p>
-        <h4>Past</h4>
-        <p>Blurb</p>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="history">
+            <?= the_field('history_blurb') ?>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="pedestrian-bridge">
+            <?= the_field('pedestrian_bridge_blurb') ?>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="canal-and-towpath">
+            <?= the_field('canal_and_towpath_blurb') ?>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="black-bass-hotel">
+            <?= the_field('black_bass_hotel_blurb') ?>
+          </div>
+        </div>
       </div>
+<div>
+
+  <!-- Nav tabs -->
+
+</div>
     </div>
   </div>
 </section>
