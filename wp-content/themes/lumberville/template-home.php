@@ -193,12 +193,43 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-7">
-      <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/slider-filler-1.jpg">
+    <div class="col-xs-12 flex">
+      <ul role="tablist" class="center-block">
+        <li role="presentation" class="active">
+          <a href="#parties" class="button" role="tab" data-toggle="tab">Private
+          Parties</a>
+        </li>
+        <li role="presentation">
+          <a href="#party-menus" role="tab" class="button" data-toggle="tab">Party
+            Menus</a>
+        </li>
+        <li role="presentation">
+          <a href="#calendar" role="tab" class="button"
+            data-toggle="tab">Calendar</a>
+        </li>
+      </ul>
     </div>
-    <div class="col-xs-5">
-      <h4>Book A Party</h4>
-      <p>Party blurb</p> </div> </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12"> 
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="parties">
+          <div class="row">
+            <div class="col-xs-6">
+            </div>
+            <div class="col-xs-6">
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="party-menus">
+          <?= the_field('pedestrian_bridge_blurb') ?>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="calendar">
+          <?= the_field('canal_and_towpath_blurb') ?>
+        </div>
+      </div>
+    </div> 
+  </div>
 </section>
 <!-- LGS -->
 <section id="lgs" class="bg-dark-tan">

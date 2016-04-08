@@ -181,6 +181,23 @@ a:hover, a:focus {
 
 /* Events */
 
+#events ul[role='tablist'] {
+  list-style-type: none;
+  padding-left: 0px;
+
+  li {
+    margin: $padding-unit $padding-unit;
+    display: inline-block;
+  }
+
+  a {
+    margin-left: 0px;
+    display: inline-block;
+
+  }
+
+}
+
 
 /* History */
 
