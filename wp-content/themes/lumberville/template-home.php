@@ -6,7 +6,7 @@
 <!-- HOME -->
 <section id="home" class="container">
   <div class="row">
-    <div class="col-xs-8 bordered">
+    <div class="col-xs-8 bordered-dark">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
@@ -18,7 +18,6 @@
             </div>
           </div>
           <?php endforeach; ?>
-
         </div>
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -31,7 +30,7 @@
         </a>
       </div>
     </div>
-    <div class="col-xs-4 bordered">
+    <div class="col-xs-4 bordered-dark">
       <div class="info">
         <img src="<?= wp_upload_dir()['url'] ; ?>/welcome.png">
         <?= the_field('home_blurb') ?>
@@ -216,16 +215,43 @@
         <div role="tabpanel" class="tab-pane active" id="parties">
           <div class="row">
             <div class="col-xs-6">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <?php foreach(get_field('private_parties_gallery') as $i=>$image): ?>
+                  <div class="item <?= $i == 0 ? "active" : '' ?>">
+                    <img src="<?php echo $image['url']; ?>">
+                    <div class="carousel-caption">
+                      <p><?= $image['caption']; ?></p>
+                    </div>
+                  </div>
+                  <?php endforeach; ?>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
             </div>
             <div class="col-xs-6">
+              <?= the_field('private_parties_blurb') ?>
             </div>
           </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="party-menus">
           <?= the_field('pedestrian_bridge_blurb') ?>
         </div>
-        <div role="tabpanel" class="tab-pane" id="calendar">
-          <?= the_field('canal_and_towpath_blurb') ?>
+        <div role="tabpanel" class="tab-pane bordered-dark" id="calendar">
+          <?php foreach(get_field('calendar_items') as $i=>$row): ?>
+            <div class="bordered-bottom-dark">
+              <?= $row['calendar_item_body'] ?>
+            </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div> 

@@ -12,7 +12,6 @@
 .h-center {
   margin-left: auto;
   margin-right: auto;
-
 }
 
 /* Layout */
@@ -92,11 +91,29 @@ a:hover, a:focus {
 }
 
 
-.bordered {
-  border: 2px solid $dark-tan;
+.bordered-light {
   padding: $padding-unit $padding-unit;
+  box-shadow: 
+  2px 0 0 0 $light-tan, 
+  0 2px 0 0 $light-tan, 
+  2px 2px 0 0 $light-tan,   /* Just to fix the corner */
+  2px 0 0 0 $light-tan inset, 
+  0 2px 0 0 $light-tan inset;
 }
 
+.bordered-dark {
+  padding: $padding-unit $padding-unit;
+  box-shadow: 
+  2px 0 0 0 $dark-tan, 
+  0 2px 0 0 $dark-tan, 
+  2px 2px 0 0 $dark-tan,   /* Just to fix the corner */
+  2px 0 0 0 $dark-tan inset, 
+  0 2px 0 0 $dark-tan inset;
+}
+
+.bordered-bottom-dark:not(:last-child) {
+  border-bottom: 2px solid $dark-tan;
+}
 .info {
   background-color: $dark-tan;
   padding: $padding-unit $padding-unit;
