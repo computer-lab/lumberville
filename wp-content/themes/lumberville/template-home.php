@@ -244,7 +244,31 @@
           </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="party-menus">
-          <?= the_field('pedestrian_bridge_blurb') ?>
+          <div id="party-menus-carousel" class="carousel slide bordered-dark" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <a class="left" href="#party-menus-carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right" href="#party-menus-carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+              <?php foreach(get_field('party_menus') as $i=>$row): ?>
+              <div class="item <?= $i == 0 ? "active" : '' ?>">
+                <div class="carousel-content">
+                  <h4><?= $row['party_menu_title']; ?></h4>
+                  <?= $row['party_menu_body']; ?>
+                  <div class="bg-dark-tan">
+                    <?= $row['party_menu_pricing']; ?>
+                  </div>
+                </div>
+              </div>
+              <?php endforeach; ?>
+            </div>
+            <!-- Controls -->
+          </div>
         </div>
         <div role="tabpanel" class="tab-pane bordered-dark" id="calendar">
           <?php foreach(get_field('calendar_items') as $i=>$row): ?>
