@@ -3,30 +3,6 @@ header {
   padding: $padding-unit 0px;
   background: $light-tan;
 
-  .small-menu {
-    img {
-      height: $menu-height;
-    }
-    ul {
-      height: $menu-height;
-    }
-  }
-
-  .large-menu {
-    img {
-      height: $menu-height * 3;
-    }
-
-    li {
-      margin-top: $menu-height;
-    }
-
-    ul {
-      height: $menu-height * 3;
-    }
-  }
-
-
   ul {
     list-style-type: none;
     margin-bottom: 0px;
@@ -54,6 +30,29 @@ header {
 
   li:not(:last-child) {
     border-right: 2px solid $dark-tan;
+  }
+
+  .small-menu {
+    img {
+      height: $menu-height;
+    }
+    ul {
+      height: $menu-height;
+    }
+  }
+
+  .large-menu {
+    img {
+      height: $menu-height * 3;
+    }
+
+    li {
+      margin-top: $menu-height;
+    }
+
+    ul {
+      height: $menu-height * 3;
+    }
   }
 }
 

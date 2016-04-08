@@ -11,7 +11,7 @@
   display: block;
 }
 
-.active {
+.button.active {
   color: $light-tan;
   background-color: $green;
   border: 2px solid $green;
@@ -27,8 +27,11 @@
 
 .social-link {
   color: $brown;
-
   .fa.fa-inverse {
     color: $light-tan;
   }
+}
+
+.social-link:hover{
+  color: $brown;
 }

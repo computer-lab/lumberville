@@ -20,7 +20,7 @@
       init: function() {
         // JavaScript to be fired on all pages
         // Bind to the click of all links with a #hash in the href
-        $('a[href^="#"]').click(function(e) {
+        $('header a[href^="#"]').click(function(e) {
           // Prevent the jump and the #hash from appearing on the address bar
           e.preventDefault();
           // Scroll the window, stop any previous animation, stop on user manual scroll
