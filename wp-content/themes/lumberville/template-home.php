@@ -256,14 +256,14 @@
       <div class="text-center">
         <?= the_field('merchandise_blurb') ?>
       </div>
-      <ul>
-        <li>Merch</li>
-        <li>Merch</li>
-        <li>Merch</li>
-        <li>Merch</li>
-        <li>Merch</li>
-        <li>Merch</li>
-      </ul>
+      <div class="flex">
+      <?php foreach(get_field('merchandise') as $i=>$image): ?>
+        <div class="center-block">
+          <img src="<?php echo $image['sizes']['medium']; ?>">
+          <h4 class="center-block"><?= $image['caption'] ?></p>
+        </div>
+      <?php endforeach; ?>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -272,13 +272,11 @@
       <div class="text-center">
         <?= the_field('goods_blurb') ?>
       </div>
-      <ul>
-        <li>Goods</li>
-        <li>Goods</li>
-        <li>Goods</li>
-        <li>Goods</li>
-        <li>Goods</li>
-      </ul>
+      <div class="flex">
+      <?php foreach(get_field('goods') as $i=>$image): ?>
+        <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
+      <?php endforeach; ?>
+      </div>
     </div>
   </div>
 </section>
