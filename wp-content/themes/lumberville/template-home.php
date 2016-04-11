@@ -108,28 +108,24 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-7 col-md-offset-1">
-        <div class="menu-selector center-block">
-          <div class="row" role="tablist">
-            <div class="col-xs-4">
-              <a href="#bean-and-leaf">Bean & Leaf</a>
-            </div>
-            <div class="col-xs-4">
-              <a class="active" href="#breakfast">Breakfast</a>
-            </div>
-            <div class="col-xs-4">
-              <a href="#lunch">Lunch</a>
-            </div>
+        <div class="menu-selector row" role="tablist">
+          <div class="col-sm-4 col-xs-6">
+            <a href="#bean-and-leaf">Bean & Leaf</a>
           </div>
-          <div class="row">
-            <div class="col-xs-4">
-              <a  href="#treats">Treats</a>
-            </div>
-            <div class="col-xs-4">
-              <a href="#gluten-free">Gluten-Free</a>
-            </div>
-            <div class="col-xs-4">
-              <a href="#supper-club">Supper Club</a>
-            </div>
+          <div class="col-sm-4 col-xs-6">
+            <a class="active" href="#breakfast">Breakfast</a>
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <a href="#lunch">Lunch</a>
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <a  href="#treats">Treats</a>
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <a href="#gluten-free">Gluten-Free</a>
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <a href="#supper-club">Supper Club</a>
           </div>
         </div>
         <div class="menus"> 

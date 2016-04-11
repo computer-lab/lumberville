@@ -165,6 +165,7 @@ a:hover, a:focus {
 /* Menus */
 
 .menu-selector {
+  padding: 0px 5px;
   a {
     display: block;
     text-align: center;
@@ -184,11 +185,7 @@ a:hover, a:focus {
     text-decoration: none;
   }
 
-  .row {
-    padding: 0px 0px;
-  }
-
-  div div {
+  div {
     padding: 0px 0px;
     box-shadow: 
     2px 0 0 0 $light-tan, 
