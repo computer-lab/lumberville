@@ -18,6 +18,13 @@ $on-mobile: 992px;
 
 /* Layout */
 
+.content {
+  margin-top: -$padding-unit;
+  @media(max-width: $on-mobile) {
+    margin-top: 2 * $padding-unit;
+  }
+}
+
 html {
   background: $light-tan;
   background-image: url('/wp-content/themes/lumberville/assets/images/texture.png');
@@ -118,9 +125,30 @@ a:hover, a:focus {
 
 /* Home */
 
+#home .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  @media(max-width: $on-mobile){
+    box-shadow: none;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+@media(max-width: $on-mobile){
+  #home .row > div {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
 .info {
   background-color: $dark-tan;
   padding: $padding-unit $padding-unit;
+  margin-bottom: $padding-unit/2;
 
   img {
     margin-bottom: $padding-unit;

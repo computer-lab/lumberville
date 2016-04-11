@@ -39,8 +39,7 @@
           <h4>Visit Us</h4>
           <?= the_field('contact_info') ?>
         </div>
-        <br>
-        <a href="/index.php/menu">
+        <a href="#menu">
           <img class="img-responsive center-block" src="<?= wp_upload_dir()['url'] ; ?>/view-menu.png">
         </a>
       </div>
