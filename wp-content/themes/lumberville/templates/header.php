@@ -1,5 +1,5 @@
 <header class="banner">
-<div class="container hidden-sm hidden-xs large-menu">
+<div class="container hidden-xs large-menu">
   <div class="row">
     <div class="col-xs-5 flex">
       <ul class="center-block">
@@ -39,7 +39,14 @@
     <a href="<?= esc_url(home_url('/')); ?>">
       <img src="<?= wp_upload_dir()['url'] ; ?>/lgs-type.png">
     </a>
-    <ul class="pull-right">
+
+    <a href="<?= the_field('facebook') ?>" class="icon-link fa-lg pull-right">
+      <span class="fa-stack">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-bars fa-inverse fa-stack-1x"></i>
+      </span>
+    </a>
+    <ul class="pull-right hidden-xs hidden-sm">
       <li>
         <a href="#">Home</a>
       </li>

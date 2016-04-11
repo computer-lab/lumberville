@@ -28,15 +28,19 @@
           $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
         });
 
-        // Main menu scripting
-        $(window).scroll(function(){
+        function setMenuVisability(){
           if($(window).scrollTop() > 250){
             $(".small-menu").show();
           } else {
-            $(".small-menu").hide();
+            if($(window).width() > 992){
+              $(".small-menu").hide();
+            }
           }
+        }
 
-        });
+        // Main menu scripting
+        $(window).scroll(setMenuVisability);
+        $(window).resize(setMenuVisability);
 
         // (Food) Menu scripting
         $("#breakfast-blurb").fadeIn();
