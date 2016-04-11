@@ -75,6 +75,7 @@ h5 {
 
 p {
   font-size: 1.3em;
+  margin-bottom: 6px;
 }
 
 a {
@@ -90,7 +91,6 @@ a:hover, a:focus {
 .text-image {
   margin-bottom: $padding-unit;
 }
-
 
 .bordered-light {
   padding: $padding-unit $padding-unit;
@@ -115,6 +115,9 @@ a:hover, a:focus {
 .bordered-bottom-dark:not(:last-child) {
   border-bottom: 2px solid $dark-tan;
 }
+
+/* Home */
+
 .info {
   background-color: $dark-tan;
   padding: $padding-unit $padding-unit;
@@ -123,6 +126,7 @@ a:hover, a:focus {
     margin-bottom: $padding-unit;
   }
 }
+
 
 /* Images */
 

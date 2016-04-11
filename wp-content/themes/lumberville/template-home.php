@@ -5,9 +5,9 @@
 ?>
 <!-- HOME -->
 <section id="home" class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-8 bordered-dark">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div class="row bordered-dark">
+    <div class="col-xs-12 col-lg-8 ">
+      <div id="carousel-home" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <?php foreach(get_field('home_gallery') as $i=>$image): ?>
@@ -30,17 +30,20 @@
         </a>
       </div>
     </div>
-    <div class="col-xs-12 col-md-4 bordered-dark">
-      <div class="info">
-        <img src="<?= wp_upload_dir()['url'] ; ?>/welcome.png">
-        <?= the_field('home_blurb') ?>
+    <div class="col-xs-12 col-lg-4">
+      <div>
+        <div class="info">
+          <img src="<?= wp_upload_dir()['url'] ; ?>/welcome.png">
+          <?= the_field('home_blurb') ?>
+          <br>
+          <h4>Visit Us</h4>
+          <?= the_field('contact_info') ?>
+        </div>
         <br>
-        <h4>Visit Us</h4>
-        <?= the_field('contact_info') ?>
+        <a href="/index.php/menu">
+          <img class="img-responsive center-block" src="<?= wp_upload_dir()['url'] ; ?>/view-menu.png">
+        </a>
       </div>
-      <a href="/index.php/menu" class="center-block">
-        <img class="center-block" src="<?= wp_upload_dir()['url'] ; ?>/view-menu.png">
-      </a>
     </div>
   </div>
   <div class="row hidden-xs">
