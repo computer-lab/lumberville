@@ -1,7 +1,6 @@
 $menu-height: 39px;
 header {
-  padding: $padding-unit 0px;
-  background: $light-tan;
+
 
   ul {
     list-style-type: none;
@@ -33,6 +32,15 @@ header {
   }
 
   .small-menu {
+    padding: $padding-unit 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: $light-tan;
+    display: none;
+    z-index: 10;
+
     img {
       height: $menu-height;
     }
@@ -42,6 +50,7 @@ header {
   }
 
   .large-menu {
+    padding: $padding-unit 0px;
     img {
       height: $menu-height * 3;
     }

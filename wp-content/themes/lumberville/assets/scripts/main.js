@@ -28,6 +28,17 @@
           $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
         });
 
+        // Main menu scripting
+        $(window).scroll(function(){
+          if($(window).scrollTop() > 250){
+            $(".small-menu").show();
+          } else {
+            $(".small-menu").hide();
+          }
+
+        });
+
+        // (Food) Menu scripting
         $("#breakfast-blurb").fadeIn();
         $("#breakfast").fadeIn();
         $('.menu-selector a[href^="#"]').click(function(e) {

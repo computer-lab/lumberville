@@ -1,3 +1,5 @@
+$on-mobile: 414px;
+
 /* Util */
 
 .flex {
@@ -202,6 +204,7 @@ a:hover, a:focus {
   list-style-type: none;
   padding-left: 0px;
 
+
   li {
     margin: $padding-unit $padding-unit;
     display: inline-block;
@@ -210,7 +213,6 @@ a:hover, a:focus {
   a {
     margin-left: 0px;
     display: inline-block;
-
   }
 
 }
@@ -229,9 +231,7 @@ a:hover, a:focus {
 
   a {
     margin-left: 0px;
-
   }
-
 }
 
 /* Merchandise and Goods */
@@ -239,4 +239,16 @@ a:hover, a:focus {
 #merchandise h4 {
   text-align: center;
   margin-top: $padding-unit/2;
+}
+
+#merchandise img {
+  max-width: 95%;
+}
+
+
+/* Contact Form */
+
+input, textarea {
+  background-color: transparent;
+
 }

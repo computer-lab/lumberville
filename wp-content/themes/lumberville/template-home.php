@@ -6,7 +6,7 @@
 <!-- HOME -->
 <section id="home" class="container">
   <div class="row">
-    <div class="col-xs-8 bordered-dark">
+    <div class="col-xs-12 col-md-8 bordered-dark">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
@@ -30,7 +30,7 @@
         </a>
       </div>
     </div>
-    <div class="col-xs-4 bordered-dark">
+    <div class="col-xs-12 col-md-4 bordered-dark">
       <div class="info">
         <img src="<?= wp_upload_dir()['url'] ; ?>/welcome.png">
         <?= the_field('home_blurb') ?>
@@ -43,7 +43,7 @@
       </a>
     </div>
   </div>
-  <div class="row">
+  <div class="row hidden-xs">
     <div class="col-xs-6 flex">
       <img class="pull-left v-center" src="<?= wp_upload_dir()['url'] ; ?>/newsletter.png">
       <a class="button pull-left active" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up</a>
@@ -82,7 +82,7 @@
 <section id="menu" class="bg-brown">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4">
+      <div class="col-xs-4 hidden-xs hidden-sm">
         <img class="img-responsive text-image" src="<?= wp_upload_dir()['url'] ; ?>/local-natural.png">
         <div class="menu-blurbs">
           <div id="bean-and-leaf-blurb">
@@ -105,7 +105,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-7 col-xs-offset-1">
+      <div class="col-xs-12 col-md-7 col-md-offset-1">
         <div class="menu-selector center-block">
           <div class="row" role="tablist">
             <div class="col-xs-4">
@@ -167,7 +167,7 @@
 
     </div>
     <hr>
-    <div class="row">
+    <div class="row hidden-xs hidden-sm">
       <div class="col-xs-4">
         <?= the_field('menu_highlight_1') ?>
       </div>
@@ -185,7 +185,7 @@
 <section id="events" class="container">
   <div class="row">
     <div class="col-xs-12">
-      <img class="center-block text-image" src="<?= wp_upload_dir()['url'] ; ?>/events.png">
+      <img class="center-block text-image img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/events.png">
       <div class="text-center">
         <?= the_field('events_blurb') ?>
       </div>
@@ -214,7 +214,7 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="parties">
           <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-md-6">
               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
@@ -238,7 +238,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-md-6">
               <?= the_field('private_parties_blurb') ?>
             </div>
           </div>
@@ -285,7 +285,7 @@
 <section id="lgs" class="bg-dark-tan">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4">
+      <div class="col-xs-12 col-md-4">
         <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/history.png">
         <ul role="tablist">
           <li role="presentation" class="active">
@@ -304,7 +304,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-xs-8">
+      <div class="col-xs-12 col-md-8">
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="history">
             <?= the_field('history_blurb') ?>
@@ -337,10 +337,10 @@
       <div class="text-center">
         <?= the_field('merchandise_blurb') ?>
       </div>
-      <div class="flex">
+      <div class="row">
       <?php foreach(get_field('merchandise') as $i=>$image): ?>
-        <div class="center-block">
-          <img src="<?php echo $image['sizes']['medium']; ?>">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
           <h4 class="center-block"><?= $image['caption'] ?></p>
         </div>
       <?php endforeach; ?>
@@ -353,9 +353,11 @@
       <div class="text-center">
         <?= the_field('goods_blurb') ?>
       </div>
-      <div class="flex">
+      <div class="row">
       <?php foreach(get_field('goods') as $i=>$image): ?>
-        <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
+        </div>
       <?php endforeach; ?>
       </div>
     </div>
@@ -365,20 +367,23 @@
 <section id="contact" class="bg-brown">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4">
+      <div class="col-xs-12 col-md-4">
         <img src="<?= wp_upload_dir()['url'] ; ?>/contact.png">
         <br>
         <br>
         <?= the_field('contact_info') ?>
         <?= the_field('hours') ?>
       </div>
-      <div class="col-xs-8">
-        <?= the_field('location') ?>
+      <div class="col-xs-12 col-md-8">
+        <?php $location = get_field('location'); ?>
+        <div class="acf-map">
+          <div class="marker" data-lat="<?= $location['lat']; ?>" data-lng="<?= $location['lng']; ?>"></div>
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <p>Contact Form</p>
+        <?= get_field('contact') ?>
       </div>
     </div>
   </div>
