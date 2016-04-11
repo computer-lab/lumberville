@@ -68,5 +68,32 @@ header {
       height: $menu-height * 3;
     }
   }
+
+  .mobile-menu {
+    position: fixed;
+    background: $brown;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 11;
+
+    i {
+      color: $light-tan;
+      position: fixed;
+      top: $padding-unit;
+      right: $padding-unit;
+    }
+
+    a {
+      color: $light-tan;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.4em;
+      line-height: 2.2em;
+      font-weight: bold;
+    }
+  }
 }
 

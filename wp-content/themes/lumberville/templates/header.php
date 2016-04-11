@@ -40,12 +40,12 @@
       <img src="<?= wp_upload_dir()['url'] ; ?>/lgs-type.png">
     </a>
 
-    <a href="<?= the_field('facebook') ?>" class="icon-link fa-lg pull-right">
+    <div class="icon-link fa-lg pull-right hidden-md hidden-lg toggle-mobile-menu">
       <span class="fa-stack">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-bars fa-inverse fa-stack-1x"></i>
       </span>
-    </a>
+    </div>
     <ul class="pull-right hidden-xs hidden-sm">
       <li>
         <a href="#">Home</a>
@@ -66,6 +66,17 @@
         <a href="#contact">Contact</a>
       </li>
     </ul>
+  </div>
+</div>
+<div class="mobile-menu flex hidden">
+  <i class="fa fa-bars fa-2x toggle-mobile-menu"></i>
+  <div class="v-center h-center">
+    <a href="#">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#events">Events</a>
+    <a href="#lgs">LGS</a>
+    <a href="#merchandise">Merch</a>
+    <a href="#contact">Contact</a>
   </div>
 </div>
 </header>

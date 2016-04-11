@@ -42,6 +42,14 @@
         $(window).scroll(setMenuVisability);
         $(window).resize(setMenuVisability);
 
+        $(".toggle-mobile-menu").click(function(){
+          $(".mobile-menu").toggleClass("hidden");
+        });
+
+        $(".mobile-menu a").click(function(){
+          $(".mobile-menu").toggleClass("hidden");
+        });
+
         // (Food) Menu scripting
         $("#breakfast-blurb").fadeIn();
         $("#breakfast").fadeIn();

@@ -53,6 +53,9 @@ section {
 
 .bg-banner {
   height: 40 * $padding-unit;
+  @media(max-width: $on-mobile){
+    height: 15 * $padding-unit;
+  }
   background-size: cover;
   background-position: center;
 }
@@ -71,10 +74,6 @@ h5 {
 }
 
 p {
-  font-size: 1.3em;
-}
-
-li {
   font-size: 1.3em;
 }
 
