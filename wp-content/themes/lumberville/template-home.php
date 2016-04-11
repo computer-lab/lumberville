@@ -84,7 +84,7 @@
 <section id="menu" class="bg-brown">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 hidden-xs hidden-sm">
+      <div class="col-xs-12 col-md-4">
         <img class="img-responsive text-image" src="<?= wp_upload_dir()['url'] ; ?>/local-natural.png">
         <div class="menu-blurbs">
           <div id="bean-and-leaf-blurb">
@@ -106,6 +106,7 @@
             <?= the_field('supper_club_menu_blurb') ?>
           </div>
         </div>
+        <br>
       </div>
       <div class="col-xs-12 col-md-7 col-md-offset-1">
         <div class="menu-selector row" role="tablist">

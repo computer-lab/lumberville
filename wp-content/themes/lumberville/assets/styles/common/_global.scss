@@ -166,6 +166,7 @@ a:hover, a:focus {
 
 .menu-selector {
   padding: 0px 5px;
+
   a {
     display: block;
     text-align: center;
@@ -199,11 +200,12 @@ a:hover, a:focus {
 .submenu-selector {
   border-bottom: 3px solid $light-tan;
   padding-left: 0px;
+  margin-top: $padding-unit/2;
 
   li {
     list-style-type: none;
     display: inline-block;
-    padding: $padding-unit $padding-unit;
+    padding: $padding-unit/3 $padding-unit/2;
     text-align: center;
   }
 
