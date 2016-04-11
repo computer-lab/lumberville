@@ -249,5 +249,15 @@ a:hover, a:focus {
 
 input, textarea {
   background-color: transparent;
-
+  width: 100%;
+  border: none;
+  padding: $padding-unit $padding-unit;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 
+    2px 0 0 0 $light-tan, 
+    0 2px 0 0 $light-tan, 
+    2px 2px 0 0 $light-tan,   /* Just to fix the corner */
+    2px 0 0 0 $light-tan inset, 
+    0 2px 0 0 $light-tan inset;
 }

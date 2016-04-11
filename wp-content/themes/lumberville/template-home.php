@@ -383,7 +383,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <?= get_field('contact') ?>
+        <?= do_shortcode( '[contact-form-7 id="130" title="Contact form 1"]' ); ?>
       </div>
     </div>
   </div>
