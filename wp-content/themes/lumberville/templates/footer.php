@@ -1,8 +1,8 @@
 <footer class="content-info">
   <img class="logo-centered" src="<?= wp_upload_dir()['url'] ; ?>/lgs-icon.png">
   <div class="container">
-    <p class="pull-left">2016 Lumberville General Store</p>
-    <div class="pull-right">
+    <p class="center-block">&copy; 2016 Lumberville General Store</p>
+    <div class="center-block">
       <a href="<?= the_field('facebook') ?>" class="icon-link fa-lg">
         <span class="fa-stack">
           <i class="fa fa-circle fa-stack-2x"></i>
