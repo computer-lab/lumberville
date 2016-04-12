@@ -20,11 +20,11 @@
           <?php endforeach; ?>
         </div>
         <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -214,7 +214,7 @@
         <div role="tabpanel" class="tab-pane active" id="parties">
           <div class="row">
             <div class="col-xs-12 col-md-6">
-              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <div id="carousel-events" class="carousel slide" data-ride="carousel">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                   <?php foreach(get_field('private_parties_gallery') as $i=>$image): ?>
@@ -227,11 +227,11 @@
                   <?php endforeach; ?>
                 </div>
                 <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <a class="left carousel-control" href="#carousel-events" role="button" data-slide="prev">
                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
                 </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <a class="right carousel-control" href="#carousel-events" role="button" data-slide="next">
                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
@@ -243,7 +243,7 @@
           </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="party-menus">
-          <div id="party-menus-carousel" class="carousel slide bordered-dark" data-ride="carousel">
+          <div id="party-menus-carousel" class="carousel slide bordered-dark title-carousel" data-ride="carousel">
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
               <a class="left" href="#party-menus-carousel" role="button" data-slide="prev">
@@ -257,9 +257,9 @@
               <?php foreach(get_field('party_menus') as $i=>$row): ?>
               <div class="item <?= $i == 0 ? "active" : '' ?>">
                 <div class="carousel-content">
-                  <h4><?= $row['party_menu_title']; ?></h4>
+                  <h4 class="title"><?= $row['party_menu_title']; ?></h4>
                   <?= $row['party_menu_body']; ?>
-                  <div class="bg-dark-tan">
+                  <div class="bg-dark-tan padded">
                     <?= $row['party_menu_pricing']; ?>
                   </div>
                 </div>

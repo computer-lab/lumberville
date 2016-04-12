@@ -16,6 +16,7 @@ $on-mobile: 992px;
   margin-right: auto;
 }
 
+
 /* Layout */
 
 .content {
@@ -41,6 +42,10 @@ section {
 
 .row {
   padding: 2 * $padding-unit 0px;
+}
+
+.padded {
+  padding: $padding-unit/2 $padding-unit/2;
 }
 
 .bg-brown {
@@ -254,6 +259,36 @@ a:hover, a:focus {
 }
 
 
+.title-carousel {
+  position: relative;
+  @media(max-width: $on-mobile){
+    padding: 0px 0px;
+  }
+  
+  a.left, a.right {
+    position: absolute;
+    top: 8px;
+    z-index: 100;
+    color: $light-tan;
+  }
+
+  a.left {
+    left: 10px;
+  }
+
+  a.right {
+    right: 10px;
+  }
+
+  .title {
+    text-align: center;
+    background: $brown;
+    color: $light-tan;
+    margin: 0px 0px;
+    line-height: 2 * $padding-unit;
+  }
+}
+
 /* History */
 
 #lgs ul[role='tablist'] {
@@ -280,6 +315,7 @@ a:hover, a:focus {
 
 #merchandise img {
   max-width: 95%;
+  margin-bottom: $padding-unit/2;
 }
 
 
