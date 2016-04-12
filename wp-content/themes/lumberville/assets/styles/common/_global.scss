@@ -189,11 +189,11 @@ a:hover, a:focus {
   div {
     padding: 0px 0px;
     box-shadow: 
-    2px 0 0 0 $light-tan, 
-    0 2px 0 0 $light-tan, 
-    2px 2px 0 0 $light-tan,   /* Just to fix the corner */
-    2px 0 0 0 $light-tan inset, 
-    0 2px 0 0 $light-tan inset;
+      2px 0 0 0 $light-tan, 
+      0 2px 0 0 $light-tan, 
+      2px 2px 0 0 $light-tan,   /* Just to fix the corner */
+      2px 0 0 0 $light-tan inset, 
+      0 2px 0 0 $light-tan inset;
   }
 }
 
@@ -233,18 +233,24 @@ a:hover, a:focus {
 #events ul[role='tablist'] {
   list-style-type: none;
   padding-left: 0px;
-
+  @media(max-width: $on-mobile){
+    width: 100%;
+  }
 
   li {
-    margin: $padding-unit $padding-unit;
+    margin: $padding-unit $padding-unit/2;
     display: inline-block;
+    @media(max-width: $on-mobile){
+      display: block;
+      margin: $padding-unit 0px;
+    }
   }
 
   a {
     margin-left: 0px;
-    display: inline-block;
+    display: block;
+    text-align: center;
   }
-
 }
 
 
@@ -261,6 +267,7 @@ a:hover, a:focus {
 
   a {
     margin-left: 0px;
+    text-align: center;
   }
 }
 
