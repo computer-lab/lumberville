@@ -329,4 +329,30 @@ input, textarea {
     2px 2px 0 0 $light-tan,   /* Just to fix the corner */
     2px 0 0 0 $light-tan inset, 
     0 2px 0 0 $light-tan inset;
+} 
+
+input:focus, textarea:focus {
+  outline: 0 !important;
+}
+
+div.wpcf7-response-output {
+  font-size: 1.2em;
+  margin: 0px 0px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    $light-tan;
+  opacity: 0.6;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    $light-tan;
+  opacity: 0.6;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    $light-tan;
+  opacity: 0.6;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    $light-tan;
 }
