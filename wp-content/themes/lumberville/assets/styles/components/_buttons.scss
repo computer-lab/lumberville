@@ -15,14 +15,17 @@
   color: $light-tan;
   background-color: $green;
   border: 2px solid $green;
+
   &.button:hover{
-  color: $light-tan;
+    color: $light-tan !important;
+    background-color: $green !important;
   }
 }
 
 .button:hover {
   color: $brown;
   text-decoration: none;
+  background: $light-tan;
 }
 
 .icon-link {
