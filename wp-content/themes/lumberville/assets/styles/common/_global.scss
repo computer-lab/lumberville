@@ -285,6 +285,19 @@ a:hover, a:focus {
   }
 }
 
+.carousel-caption {
+  left: 0px;
+  right: 0px;
+  background: transparentize($brown, 0.1);
+  bottom: 0px;
+  padding: 20px 0px;
+  p {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
 /* History */
 
 #lgs ul[role='tablist'] {
