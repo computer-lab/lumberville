@@ -1,5 +1,5 @@
 .button {
-  border: 2px solid $brown;
+  border: 3px solid $brown;
   font-size: 1.2em;
   padding: $padding-unit/2 $padding-unit;
   padding-bottom: $padding-unit/2 - 5;
@@ -11,10 +11,14 @@
   display: block;
 }
 
+#events .button {
+  min-width: 210px;
+}
+
 .button.active, .active .button {
   color: $light-tan;
   background-color: $green;
-  border: 2px solid $green;
+  border: 3px solid $green;
 
   &.button:hover{
     color: $light-tan !important;
@@ -35,6 +39,3 @@
   }
 }
 
-.icon-link:hover{
-  color: $brown;
-}

@@ -48,29 +48,29 @@
   <div class="row hidden-xs">
     <div class="col-xs-6 flex">
       <img class="pull-left v-center" src="<?= wp_upload_dir()['url'] ; ?>/newsletter.png">
-      <a class="button pull-left active" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up</a>
+      <a class="button pull-left active" target="_blank" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up</a>
     </div>
     <div class="col-xs-6">
       <div class="pull-right">
-        <a href="<?= the_field('facebook') ?>" class="icon-link fa-lg">
+        <a href="<?= the_field('facebook') ?>" class="icon-link fa-lg" target="_blank">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-facebook fa-inverse fa-stack-1x"></i>
           </span>
         </a>
-        <a href="<?= the_field('twitter') ?>" class="icon-link fa-lg">
+        <a href="<?= the_field('twitter') ?>" class="icon-link fa-lg" target="_blank">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-twitter fa-inverse fa-stack-1x"></i>
           </span>
         </a>
-        <a href="<?= the_field('google_plus') ?>" class="icon-link fa-lg">
+        <a href="<?= the_field('google_plus') ?>" class="icon-link fa-lg" target="_blank">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-google-plus fa-inverse fa-stack-1x"></i>
           </span>
         </a>
-        <a href="<?= the_field('instagram') ?>" class="icon-link fa-lg">
+        <a href="<?= the_field('instagram') ?>" class="icon-link fa-lg" target="_blank">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-instagram fa-inverse fa-stack-1x"></i>
@@ -85,7 +85,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-4">
-        <img class="img-responsive text-image" src="<?= wp_upload_dir()['url'] ; ?>/local-natural.png">
+        <img class="img-responsive text-image center-block-mobile" src="<?= wp_upload_dir()['url'] ; ?>/local-natural.png">
         <div class="menu-blurbs">
           <div id="bean-and-leaf-blurb">
             <?= the_field('bean_and_leaf_menu_blurb') ?>
@@ -174,7 +174,7 @@
         <?= the_field('menu_highlight_2') ?>
       </div>
       <div class="col-xs-4">
-        <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/lgs-otroyb.png">
+        <img style="max-height: 150px;" class="center-block img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/lgs-otroyb.png">
       </div>
     </div>
   </div>
@@ -185,7 +185,7 @@
   <div class="row">
     <div class="col-xs-12">
       <img class="center-block text-image img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/events.png">
-      <div class="text-center">
+      <div class="text-center subtitle">
         <?= the_field('events_blurb') ?>
       </div>
     </div>
@@ -285,7 +285,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-4">
-        <img class="img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/history.png">
+        <img class="img-responsive center-block-mobile" src="<?= wp_upload_dir()['url'] ; ?>/history.png">
         <ul role="tablist">
           <li role="presentation" class="active">
             <a href="#history" class="button" role="tab" data-toggle="tab">History</a>
@@ -303,7 +303,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-xs-12 col-md-8">
+      <div class="col-xs-12 col-md-7 col-md-offset-1">
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="history">
             <?= the_field('history_blurb') ?>
@@ -319,13 +319,7 @@
           </div>
         </div>
       </div>
-<div>
-
-  <!-- Nav tabs -->
-
-</div>
-    </div>
-  </div>
+  <div>
 </section>
 <!-- MERCHANDISE  -->
 <div class="bg-banner" style="background-image: url('<?= wp_upload_dir()['url'] ; ?>/banner-filler.jpg');"></div>
@@ -333,31 +327,34 @@
   <div class="row">
     <div class="col-xs-12">
       <img class="center-block text-image" src="<?= wp_upload_dir()['url'] ; ?>/merch.png">
-      <div class="text-center">
+      <div class="text-center subtitle">
         <?= the_field('merchandise_blurb') ?>
       </div>
       <div class="row">
-      <?php foreach(get_field('merchandise') as $i=>$image): ?>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
-          <h4 class="center-block"><?= $image['caption'] ?></p>
+        <div class="center-block">
+        <?php foreach(get_field('merchandise') as $i=>$image): ?>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
+            <h4 class="center-block"><?= $image['caption'] ?></p>
+          </div>
+        <?php endforeach; ?>
         </div>
-      <?php endforeach; ?>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
       <img class="center-block text-image" src="<?= wp_upload_dir()['url'] ; ?>/local-goods.png">
-      <div class="text-center">
+      <div class="text-center subtitle">
         <?= the_field('goods_blurb') ?>
       </div>
       <div class="row">
-      <?php foreach(get_field('goods') as $i=>$image): ?>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
-        </div>
-      <?php endforeach; ?>
+       
+        <?php foreach(get_field('goods') as $i=>$image): ?>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
+          </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
@@ -367,11 +364,16 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-4">
-        <img src="<?= wp_upload_dir()['url'] ; ?>/contact.png">
+        <img class="img-responsive center-block-mobile" src="<?= wp_upload_dir()['url'] ; ?>/contact.png">
         <br>
         <br>
-        <?= the_field('contact_info') ?>
+        <div class="contact">
+          <?= the_field('contact_info') ?>
+          <br>
+          <h4>Hours</h4>
+        </div>
         <?= the_field('hours') ?>
+        <br>
       </div>
       <div class="col-xs-12 col-md-8">
         <?php $location = get_field('location'); ?>

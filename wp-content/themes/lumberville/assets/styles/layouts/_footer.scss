@@ -1,9 +1,6 @@
 footer {
   padding: 1.5* $padding-unit $padding-unit;
   background: $light-tan;
-}
-
-footer {
   position: relative;
 }
 
@@ -15,6 +12,9 @@ footer .container p {
     float: none;
     text-align: center;
   }
+  line-height: 37px;
+  margin-bottom: 0px;
+  color: $brown;
 }
 
 footer .container div {
@@ -27,8 +27,7 @@ footer .container div {
   }
 }
 
-
-$icon-height: 80px;
+$icon-height: 90px;
 
 .logo-centered {
   position: absolute;

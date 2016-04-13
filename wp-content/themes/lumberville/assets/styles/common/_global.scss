@@ -1,4 +1,5 @@
 $on-mobile: 992px;
+$on-medium: 1200px;
 
 /* Util */
 
@@ -14,6 +15,14 @@ $on-mobile: 992px;
 .h-center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.center-block-mobile {
+  @media(max-width: $on-mobile) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Layout */
@@ -37,6 +46,9 @@ body {
 
 section {
   padding: 4 * $padding-unit 0px;
+  @media(max-width: $on-mobile) {
+    padding: 2 * $padding-unit 0px;
+  }
 }
 
 .row {
@@ -63,13 +75,18 @@ section {
 }
 
 .bg-banner {
-  height: 40 * $padding-unit;
+  height: 35 * $padding-unit;
+  @media(max-width: $on-medium){
+    height: 20 * $padding-unit;
+  }
   @media(max-width: $on-mobile){
     height: 15 * $padding-unit;
   }
   background-size: cover;
   background-position: center;
 }
+
+
 
 /* Typography */
 
@@ -84,9 +101,22 @@ h5 {
   font-weight: bold;
 }
 
+li {
+  font-size: 1.25em;
+}
+
 p {
-  font-size: 1.3em;
+  font-size: 1.25em;
   margin-bottom: 6px;
+}
+
+.subtitle {
+  @media(min-width: $on-mobile){
+    max-width: 60%;
+  }
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5em;
 }
 
 a {
@@ -96,10 +126,6 @@ a {
 
 a:hover, a:focus {
   color: lighten($brown, 15%);
-}
-
-a:hover, a:focus {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -155,7 +181,7 @@ a:hover, a:focus {
 
 .info {
   background-color: $dark-tan;
-  padding: $padding-unit $padding-unit;
+  padding: 2*$padding-unit $padding-unit $padding-unit $padding-unit;
   margin-bottom: $padding-unit/2;
 
   img {
@@ -170,6 +196,12 @@ a:hover, a:focus {
 }
 
 /* Menus */
+
+#menu img {
+  @media(max-width: $on-mobile){
+    width: 100%;
+  }
+}
 
 .menu-selector {
   padding: 0px 5px;
@@ -189,7 +221,7 @@ a:hover, a:focus {
     background: $light-tan;
   }
 
-  a:hover, a:focus {
+  a:not(.active):hover, a:not(.active):focus {
     text-decoration: none;
     background: transparentize($light-tan, .85);
   }
@@ -205,10 +237,19 @@ a:hover, a:focus {
   }
 }
 
+
+
 .submenu-selector {
-  border-bottom: 3px solid $light-tan;
+  border-bottom: 2px solid $light-tan;
+  margin-bottom: $padding-unit;
   padding-left: 0px;
   margin-top: $padding-unit/2;
+  font-size: 1.1em;
+
+  a:hover, a:focus {
+    text-shadow: 0px 0px 1px $light-tan;
+    color: $light-tan;
+  }
 
   li {
     list-style-type: none;
@@ -222,9 +263,15 @@ a:hover, a:focus {
   }
 }
 
+hr {
+  border-top: 2px solid $light-tan;
+
+}
+
 .menu-blurbs img {
   border: 2px solid $light-tan;
-  padding: $padding-unit / 2;
+  padding: $padding-unit / 3;
+  margin-bottom: $padding-unit/2;
 }
 
 .menu-blurbs > div {
@@ -237,40 +284,55 @@ a:hover, a:focus {
 
 /* Events */
 
-#events ul[role='tablist'] {
-  list-style-type: none;
-  padding-left: 0px;
-  @media(max-width: $on-mobile){
-    width: 100%;
+#events {
+  .row {
+    padding: 1em 0px;
   }
 
-  li {
-    margin: $padding-unit $padding-unit/2;
-    display: inline-block;
+  #party-menus, #calendar {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  ul[role='tablist'] {
+    list-style-type: none;
+    padding-left: 0px;
     @media(max-width: $on-mobile){
-      display: block;
-      margin: $padding-unit 0px;
+      width: 100%;
     }
-  }
 
-  a {
-    margin-left: 0px;
-    display: block;
-    text-align: center;
+    li {
+      margin: $padding-unit $padding-unit/2;
+      display: inline-block;
+      @media(max-width: $on-mobile){
+        display: block;
+        margin: $padding-unit 0px;
+      }
+    }
+
+    a {
+      margin-left: 0px;
+      display: block;
+      text-align: center;
+    }
+
   }
 }
 
 .title-carousel {
   position: relative;
-  @media(max-width: $on-mobile){
-    padding: 0px 0px;
-  }
+  padding: 0px 0px;
   
   a.left, a.right {
     position: absolute;
-    top: 8px;
+    top: 12px;
     z-index: 100;
     color: $light-tan;
+    font-size: 1.25em;
+  }
+
+  a:hover {
+    text-shadow: 0px 0px 2px $light-tan;
   }
 
   a.left {
@@ -286,20 +348,42 @@ a:hover, a:focus {
     background: $brown;
     color: $light-tan;
     margin: 0px 0px;
-    line-height: 2 * $padding-unit;
+    line-height: 2.25 * $padding-unit;
+  }
+}
+
+#home-carousel {
+  padding-right: 0px;
+
+}
+
+.carousel-control {
+  @media(min-width: $on-mobile){
+    bottom: 34px;
+    width: 34px;
+    top: initial;
+  }
+}
+
+.carousel-control.left {
+  @media(min-width: $on-mobile){
+    right: 42px;
+    left: initial;
   }
 }
 
 .carousel-caption {
+  text-align: left;
   left: 0px;
   right: 0px;
   background: transparentize($brown, 0.1);
   bottom: 0px;
-  padding: 20px 0px;
+  padding: 15px 0px;
   p {
     margin-bottom: 0px;
     text-transform: uppercase;
     font-weight: bold;
+    margin-left: $padding-unit;
   }
 }
 
@@ -324,15 +408,28 @@ a:hover, a:focus {
 
 #merchandise h4 {
   text-align: center;
-  margin-top: $padding-unit/2;
+  margin-bottom: $padding-unit;
+  margin-top: -0.5*$padding-unit;
 }
 
 #merchandise img {
   max-width: 95%;
-  margin-bottom: $padding-unit/2;
+  margin-bottom: 2*$padding-unit;
 }
 
+
 /* Contact Form */
+
+#contact {
+  img {
+    margin-bottom: 1em;
+  }
+  .contact {
+    @media(max-width: $on-mobile){
+      text-align: center;
+    }
+  }
+}
 
 input, textarea {
   background-color: transparent;

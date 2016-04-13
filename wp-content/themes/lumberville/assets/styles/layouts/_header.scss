@@ -1,4 +1,5 @@
 $menu-height: 45px;
+$small-menu-height: $menu-height - 10;
 header {
 
 
@@ -20,11 +21,6 @@ header {
       line-height: $menu-height;
       display: block;
     }
-
-    a:hover, a:focus {
-      text-decoration: none;
-      color: $brown;
-    }
   }
 
   li:not(:last-child) {
@@ -42,16 +38,22 @@ header {
     right: 0px;
     background: $light-tan;
     z-index: 10;
+    border-bottom: 4px solid $dark-tan;
 
     i:hover {
       cursor: pointer;
     }
 
     img {
-      height: $menu-height;
+      height: $small-menu-height - 5;
     }
     ul {
-      height: $menu-height;
+      height: $small-menu-height;
+    }
+
+    a {
+      line-height: $small-menu-height;
+
     }
   }
 
@@ -60,7 +62,7 @@ header {
       display: none;
     }
     
-    padding: $padding-unit 0px;
+    padding: $padding-unit/2 0px 0px 0px;
     img {
       height: $menu-height * 3;
     }
@@ -72,6 +74,7 @@ header {
     ul {
       height: $menu-height * 3;
     }
+
   }
 
   .mobile-menu {
