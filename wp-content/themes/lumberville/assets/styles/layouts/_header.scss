@@ -2,7 +2,6 @@ $menu-height: 45px;
 $small-menu-height: $menu-height - 10;
 header {
 
-
   ul {
     list-style-type: none;
     margin-bottom: 0px;
@@ -10,7 +9,7 @@ header {
   }
 
   li {
-    width: 100px;
+    width: 110px;
     display: inline-block;
 
     a {
@@ -64,7 +63,8 @@ header {
     
     padding: $padding-unit/2 0px 0px 0px;
     img {
-      height: $menu-height * 3;
+      height: $menu-height * 3 + 20px;
+      margin-top: - 10px;
     }
 
     li {

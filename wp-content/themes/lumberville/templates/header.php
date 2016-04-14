@@ -15,8 +15,8 @@
       </ul>
     </div>
     <div class="col-xs-2">
-      <a href="<?= esc_url(home_url('/')); ?>">
-        <img src="<?= wp_upload_dir()['url'] ; ?>/lgs-logo.png">
+      <a class="center-block" href="<?= esc_url(home_url('/')); ?>">
+        <img class="center-block" src="<?= wp_upload_dir()['url'] ; ?>/lgs-logo.png">
       </a>
     </div>
     <div class="col-xs-5 flex">

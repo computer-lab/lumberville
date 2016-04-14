@@ -28,7 +28,7 @@ $on-medium: 1200px;
 /* Layout */
 
 .content {
-  margin-top: -$padding-unit;
+  margin-top: - 2 * $padding-unit;
   @media(max-width: $on-mobile) {
     margin-top: 2 * $padding-unit;
   }
@@ -122,10 +122,11 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 a:hover, a:focus {
-  color: lighten($brown, 15%);
+  color: $green;
   text-decoration: none;
 }
 
@@ -182,11 +183,16 @@ a:hover, a:focus {
 .info {
   background-color: $dark-tan;
   padding: 2*$padding-unit $padding-unit $padding-unit $padding-unit;
-  margin-bottom: $padding-unit/2;
+  margin-bottom: $padding-unit;
+
+  p {
+    margin-bottom: 0px;
+  }
 
   img {
     margin-bottom: $padding-unit;
   }
+
 }
 
 /* Images */
@@ -214,6 +220,7 @@ a:hover, a:focus {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.2em;
+    transition: background 0.3s;
   }
 
   a.active {
@@ -223,7 +230,7 @@ a:hover, a:focus {
 
   a:not(.active):hover, a:not(.active):focus {
     text-decoration: none;
-    background: transparentize($light-tan, .85);
+    background: transparentize($light-tan, .9);
   }
 
   div {
@@ -294,6 +301,14 @@ hr {
     margin-right: -15px;
   }
 
+  #calendar div:not(:first-child) {
+    padding-top: 10px;
+  }
+
+  #calendar div:not(:last-child) {
+    padding-bottom: 8px;
+  }
+
   ul[role='tablist'] {
     list-style-type: none;
     padding-left: 0px;
@@ -354,7 +369,6 @@ hr {
 
 #home-carousel {
   padding-right: 0px;
-
 }
 
 .carousel-control {
