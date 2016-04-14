@@ -77,10 +77,10 @@ section {
 .bg-banner {
   height: 35 * $padding-unit;
   @media(max-width: $on-medium){
-    height: 20 * $padding-unit;
+    height: 35 * $padding-unit;
   }
   @media(max-width: $on-mobile){
-    height: 15 * $padding-unit;
+    height: 20 * $padding-unit;
   }
   background-size: cover;
   background-position: center;
@@ -106,7 +106,7 @@ li {
 }
 
 p {
-  font-size: 1.25em;
+  font-size: 1.3em;
   margin-bottom: 6px;
 }
 
@@ -203,9 +203,15 @@ a:hover, a:focus {
 
 /* Menus */
 
-#menu img {
-  @media(max-width: $on-mobile){
-    width: 100%;
+.menu-blurbs  {
+  @media(max-width: $on-medium){
+    img {
+      display: none;
+    }
+    margin-top: 3*$padding-unit;
+  }
+  h4 {
+    font-size: 1.35em;
   }
 }
 
@@ -248,10 +254,11 @@ a:hover, a:focus {
 
 .submenu-selector {
   border-bottom: 2px solid $light-tan;
-  margin-bottom: $padding-unit;
+  margin-bottom: 2*$padding-unit;
   padding-left: 0px;
   margin-top: $padding-unit/2;
   font-size: 1.1em;
+  text-align: center;
 
   a:hover, a:focus {
     text-shadow: 0px 0px 1px $light-tan;
@@ -296,6 +303,24 @@ hr {
     padding: 1em 0px;
   }
 
+
+  hr {
+    border-top: 1px solid $dark-tan;
+    width: 90%;
+    margin-top: $padding-unit;
+    margin-bottom: $padding-unit;
+  }
+
+  h4:not(.title) {
+    margin-bottom: $padding-unit;
+    margin-top: $padding-unit;
+  }
+
+  // for price
+  h5 {
+    color: $brown;
+  }
+
   #party-menus, #calendar {
     margin-left: -15px;
     margin-right: -15px;
@@ -330,7 +355,6 @@ hr {
       display: block;
       text-align: center;
     }
-
   }
 }
 
@@ -340,7 +364,7 @@ hr {
   
   a.left, a.right {
     position: absolute;
-    top: 12px;
+    top: 9px;
     z-index: 100;
     color: $light-tan;
     font-size: 1.25em;
@@ -431,6 +455,10 @@ hr {
   margin-bottom: 2*$padding-unit;
 }
 
+#merchandise {
+  padding-bottom: 0px;
+}
+
 
 /* Contact Form */
 
@@ -438,20 +466,34 @@ hr {
   img {
     margin-bottom: 1em;
   }
-  .contact {
-    @media(max-width: $on-mobile){
+
+  @media(max-width: $on-mobile){
+    .contact {
       text-align: center;
     }
+    ul {
+      margin: auto;
+    }
   }
+
 }
 
-input, textarea {
+
+form p {
+  margin-bottom: 0px;
+
+}
+
+input, textarea, .wpcf7-recaptcha{
   background-color: transparent;
-  width: 100%;
+  overflow: hidden;
   border: none;
+  width: 100%;
   padding: $padding-unit $padding-unit;
   text-transform: uppercase;
   font-weight: bold;
+  margin-top:0px;
+  margin-bottom: 0px;
   box-shadow: 
     2px 0 0 0 $light-tan, 
     0 2px 0 0 $light-tan, 
@@ -460,7 +502,49 @@ input, textarea {
     0 2px 0 0 $light-tan inset;
 } 
 
-input:focus, textarea:focus {
+textarea {
+  height: 120px;
+  margin-bottom: -7px;
+}
+
+input[type="submit"] {
+  background: $dark-tan;
+  box-shadow: 
+    2px 0 0 0 $dark-tan, 
+    0 2px 0 0 $dark-tan, 
+    2px 2px 0 0 $dark-tan,   /* Just to fix the corner */
+    2px 0 0 0 $dark-tan inset, 
+    0 2px 0 0 $dark-tan inset;
+  color: $brown;
+  transition: color 0.3s, box-shadow 0.3s, background 0.3s;
+  margin-top: $padding-unit/2;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background: $green;
+  box-shadow: 
+    2px 0 0 0 $green, 
+    0 2px 0 0 $green, 
+    2px 2px 0 0 $green,   /* Just to fix the corner */
+    2px 0 0 0 $green inset, 
+    0 2px 0 0 $green inset;
+  color: $light-tan;
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: $padding-unit/2;
+  margin-bottom: -$padding-unit;
+  margin-left: $padding-unit/2;
+}
+
+@media(max-width: $on-medium){
+  form {
+    margin-top: - 2 * $padding-unit;
+  }
+}
+
+
+*:focus {
   outline: 0 !important;
 }
 
@@ -471,17 +555,18 @@ div.wpcf7-response-output {
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color:    $light-tan;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   color:    $light-tan;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
   color:    $light-tan;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color:    $light-tan;
 }
+

@@ -48,7 +48,7 @@
   <div class="row hidden-xs">
     <div class="col-xs-6 flex">
       <img class="pull-left v-center" src="<?= wp_upload_dir()['url'] ; ?>/newsletter.png">
-      <a class="button pull-left active" target="_blank" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up</a>
+      <a class="button green pull-left"  target="_blank" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up</a>
     </div>
     <div class="col-xs-6">
       <div class="pull-right">
@@ -111,7 +111,7 @@
       <div class="col-xs-12 col-md-7 col-md-offset-1">
         <div class="menu-selector row" role="tablist">
           <div class="col-sm-4 col-xs-6">
-            <a href="#bean-and-leaf">Bean & Leaf</a>
+            <a href="#bean_and_leaf">Bean & Leaf</a>
           </div>
           <div class="col-sm-4 col-xs-6">
             <a class="active" href="#breakfast">Breakfast</a>
@@ -123,10 +123,10 @@
             <a  href="#treats">Treats</a>
           </div>
           <div class="col-sm-4 col-xs-6">
-            <a href="#gluten-free">Gluten-Free</a>
+            <a href="#gluten_free">Gluten-Free</a>
           </div>
           <div class="col-sm-4 col-xs-6">
-            <a href="#supper-club">Supper Club</a>
+            <a href="#supper_club">Supper Club</a>
           </div>
         </div>
         <div class="menus"> 
@@ -165,7 +165,7 @@
       </div>
 
     </div>
-    <hr>
+    <hr class="hidden-xs hidden-sm">
     <div class="row hidden-xs hidden-sm">
       <div class="col-xs-4">
         <?= the_field('menu_highlight_1') ?>
@@ -243,7 +243,7 @@
           </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="party-menus">
-          <div id="party-menus-carousel" class="carousel slide bordered-dark title-carousel" data-ride="carousel">
+          <div id="party-menus-carousel" class="carousel slide bordered-dark title-carousel" data-interval="false" data-ride="carousel">
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
               <a class="left" href="#party-menus-carousel" role="button" data-slide="prev">
@@ -353,6 +353,7 @@
         <?php foreach(get_field('goods') as $i=>$image): ?>
           <div class="col-xs-12 col-sm-6 col-md-3">
             <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
+            <h4 class="center-block"><?= $image['caption'] ?></p>
           </div>
         <?php endforeach; ?>
       </div>
@@ -372,10 +373,12 @@
           <br>
           <h4>Hours</h4>
         </div>
-        <?= the_field('hours') ?>
+        <div class="flex">
+          <?= the_field('hours') ?>
+        </div>
         <br>
       </div>
-      <div class="col-xs-12 col-md-8">
+      <div class="col-xs-12 col-md-8 hidden-xs hidden-sm">
         <?php $location = get_field('location'); ?>
         <div class="acf-map">
           <div class="marker" data-lat="<?= $location['lat']; ?>" data-lng="<?= $location['lng']; ?>"></div>

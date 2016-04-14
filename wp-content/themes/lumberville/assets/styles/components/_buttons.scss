@@ -1,6 +1,6 @@
 .button {
   border: 3px solid $brown;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: $padding-unit/2 $padding-unit;
   padding-bottom: $padding-unit/2 - 5;
   color: $brown;
@@ -9,13 +9,14 @@
   text-transform: uppercase;
   margin-left: $padding-unit;
   display: block;
+  transition: background-color 0.3s, border 0.3s;
 }
 
 #events .button {
   min-width: 210px;
 }
 
-.button.active, .active .button {
+.button.active, .active .button, .button.green {
   color: $light-tan;
   background-color: $green;
   border: 3px solid $green;
@@ -24,12 +25,19 @@
     color: $light-tan !important;
     background-color: $green !important;
   }
+  &.button.green:hover {
+    color: $light-tan !important;
+    background-color: $brown !important;
+    border: 3px solid $brown;
+  }
 }
 
+
 .button:hover {
-  color: $brown;
+  color: $light-tan;
   text-decoration: none;
-  background: $light-tan;
+  background: transparentize($green, 0.15);
+  border: 3px solid transparentize($green, 0.15);
 }
 
 .icon-link {

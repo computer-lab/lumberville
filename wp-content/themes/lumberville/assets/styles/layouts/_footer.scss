@@ -1,5 +1,5 @@
 footer {
-  padding: 1.5* $padding-unit $padding-unit;
+  padding: 1.5 * $padding-unit $padding-unit;
   background: $light-tan;
   position: relative;
 }
@@ -9,6 +9,7 @@ footer .container p {
   @media(max-width: $on-mobile){
     display: block;
     margin-top: 2*$padding-unit;
+    margin-bottom: - 10px;
     float: none;
     text-align: center;
   }
