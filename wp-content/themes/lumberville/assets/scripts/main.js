@@ -25,6 +25,7 @@
           e.preventDefault();
           // Scroll the window, stop any previous animation, stop on user manual scroll
           // Check https://github.com/flesler/jquery.scrollTo for more customizability
+          $(".mobile-menu").addClass("hidden");
           $(window).stop(true).scrollTo(this.hash, {duration:1000, offset: -50, interrupt:true});
         });
 
@@ -43,10 +44,6 @@
         $(window).resize(setMenuVisability);
 
         $(".toggle-mobile-menu").click(function(){
-          $(".mobile-menu").toggleClass("hidden");
-        });
-
-        $(".mobile-menu a").click(function(){
           $(".mobile-menu").toggleClass("hidden");
         });
 

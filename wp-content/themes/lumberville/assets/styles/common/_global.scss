@@ -414,6 +414,7 @@ hr {
   text-align: left;
   left: 0px;
   right: 0px;
+  z-index: 2;
   background: transparentize($brown, 0.1);
   bottom: 0px;
   padding: 15px 0px;
@@ -484,7 +485,7 @@ form p {
 
 }
 
-input, textarea, .wpcf7-recaptcha{
+input, textarea{
   background-color: transparent;
   overflow: hidden;
   border: none;
@@ -507,8 +508,20 @@ textarea {
   margin-bottom: -7px;
 }
 
+.wpcf7-recaptcha {
+  width: 50%;
+  float: left;
+  padding: $padding-unit $padding-unit;
+  padding-left: 0px;
+}
+
 input[type="submit"] {
   background: $dark-tan;
+  @media(min-width: 768px){
+    float: left;
+    width: 50%;
+    margin-top: $padding-unit;
+  }
   box-shadow: 
     2px 0 0 0 $dark-tan, 
     0 2px 0 0 $dark-tan, 
@@ -517,7 +530,6 @@ input[type="submit"] {
     0 2px 0 0 $dark-tan inset;
   color: $brown;
   transition: color 0.3s, box-shadow 0.3s, background 0.3s;
-  margin-top: $padding-unit/2;
 }
 
 input[type="submit"]:hover, input[type="submit"]:focus {
@@ -536,7 +548,10 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   margin-bottom: -$padding-unit;
   margin-left: $padding-unit/2;
 }
+div.wpcf7-validation-errors {
+  border: none;
 
+}
 @media(max-width: $on-medium){
   form {
     margin-top: - 2 * $padding-unit;

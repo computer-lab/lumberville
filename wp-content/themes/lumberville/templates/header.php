@@ -4,7 +4,7 @@
     <div class="col-xs-5 flex">
       <ul class="center-block">
         <li>
-          <a href="#">Home</a>
+          <a href="#home">Home</a>
         </li>
         <li>
           <a href="#menu">Menu</a>
@@ -48,7 +48,7 @@
     </div>
     <ul class="pull-right hidden-xs hidden-sm">
       <li>
-        <a href="#">Home</a>
+        <a href="#home">Home</a>
       </li>
       <li>
         <a href="#menu">Menu</a>
@@ -71,7 +71,7 @@
 <div class="mobile-menu flex hidden">
   <i class="fa fa-bars fa-2x toggle-mobile-menu"></i>
   <div class="v-center h-center">
-    <a href="#">Home</a>
+    <a href="#home">Home</a>
     <a href="#menu">Menu</a>
     <a href="#events">Events</a>
     <a href="#lgs">LGS</a>

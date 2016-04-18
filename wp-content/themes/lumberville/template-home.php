@@ -161,19 +161,19 @@
           <?php endforeach; ?>
         </div>
         <!-- end .menus -->
-
       </div>
-
     </div>
-    <hr class="hidden-xs hidden-sm">
-    <div class="row hidden-xs hidden-sm">
-      <div class="col-xs-4">
+    <hr>
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
         <?= the_field('menu_highlight_1') ?>
       </div>
-      <div class="col-xs-4">
+      <div class="col-xs-12 col-md-4">
         <?= the_field('menu_highlight_2') ?>
       </div>
-      <div class="col-xs-4">
+      <div class="col-xs-12 hidden-sm col-md-4">
+        <br class="visible-xs">
+        <br class="visible-xs">
         <img style="max-height: 150px;" class="center-block img-responsive" src="<?= wp_upload_dir()['url'] ; ?>/lgs-otroyb.png">
       </div>
     </div>
