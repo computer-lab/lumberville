@@ -22,7 +22,7 @@
     <div class="col-xs-5 flex">
       <ul class="center-block">
         <li>
-          <a href="#lgs">LGS</a>
+          <a href="#lgs">About</a>
         </li>
         <li>
           <a href="#merchandise">Merch</a>
@@ -57,7 +57,7 @@
         <a href="#events">Events</a>
       </li>
       <li>
-        <a href="#lgs">LGS</a>
+        <a href="#lgs">About</a>
       </li>
       <li>
         <a href="#merchandise">Merch</a>
@@ -74,7 +74,7 @@
     <a href="#home">Home</a>
     <a href="#menu">Menu</a>
     <a href="#events">Events</a>
-    <a href="#lgs">LGS</a>
+    <a href="#lgs">About</a>
     <a href="#merchandise">Merch</a>
     <a href="#contact">Contact</a>
   </div>

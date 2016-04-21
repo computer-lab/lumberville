@@ -4,6 +4,16 @@
 */
 ?>
 <!-- HOME -->
+<style>
+input, textarea{
+  box-shadow: 
+    2px 0 0 0  #fffbf6, 
+    0 2px 0 0 #fffbf6, 
+    2px 2px 0 0 #fffbf6,   /* Just to fix the corner */
+    2px 0 0 0 #fffbf6 inset, 
+    0 2px 0 0 #fffbf6 inset !important;
+}
+</style>
 <section id="home" class="container">
   <div class="row bordered-dark">
     <div class="col-xs-12 col-lg-8 ">
@@ -46,9 +56,9 @@
     </div>
   </div>
   <div class="row hidden-xs">
-    <div class="col-xs-6 flex">
-      <img class="pull-left v-center" src="<?= wp_upload_dir()['url'] ; ?>/newsletter.png">
-      <a class="button green pull-left"  target="_blank" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=9bbe2447-1b40-46a7-be09-507ced0e59a3">Sign Up</a>
+    <div class="col-xs-6">
+      <img class="pull-left" style="margin-top: 11px;" src="<?= wp_upload_dir()['url'] ; ?>/newsletter.png">
+      <a class="button green pull-left"  target="_blank" href="http://visitor.r20.constantcontact.com/d.jsp?llr=gy7ai5jab&p=oi&m=1110190355206&sit=qqkz4n4gb&f=00b8ba1e-a725-492e-91ae-e20c1f70f3f1">Sign Up</a>
     </div>
     <div class="col-xs-6">
       <div class="pull-right">
@@ -87,7 +97,7 @@
       <div class="col-xs-12 col-md-4">
         <img class="img-responsive text-image center-block-mobile" src="<?= wp_upload_dir()['url'] ; ?>/local-natural.png">
         <div class="menu-blurbs">
-          <div id="bean-and-leaf-blurb">
+          <div id="bean_and_leaf-blurb">
             <?= the_field('bean_and_leaf_menu_blurb') ?>
           </div>
           <div id="breakfast-blurb">
@@ -99,10 +109,10 @@
           <div id="treats-blurb">
             <?= the_field('treats_menu_blurb') ?>
           </div>
-          <div id="gluten-free-blurb">
+          <div id="gluten_free-blurb">
             <?= the_field('gluten_free_menu_blurb') ?>
           </div>
-          <div id="supper-club-blurb">
+          <div id="supper_club-blurb">
             <?= the_field('supper_club_menu_blurb') ?>
           </div>
         </div>
@@ -180,7 +190,7 @@
   </div>
 </section>
 <!-- EVENTS -->
-<div class="bg-banner" style="background-image: url('<?= wp_upload_dir()['url'] ; ?>/banner-filler.jpg');"></div>
+<div class="bg-banner" style="background-image: url('<?= wp_upload_dir()['url'] ; ?>/banner-1.jpg');"></div>
 <section id="events" class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -191,8 +201,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 flex">
-      <ul role="tablist" class="center-block">
+    <div class="col-xs-12 text-center">
+      <ul role="tablist" style="display: inline-block;">
         <li role="presentation" class="active">
           <a href="#parties" class="button" role="tab" data-toggle="tab">Private
           Parties</a>
@@ -259,7 +269,7 @@
                 <div class="carousel-content">
                   <h4 class="title"><?= $row['party_menu_title']; ?></h4>
                   <?= $row['party_menu_body']; ?>
-                  <div class="bg-dark-tan padded">
+                  <div style="margin-top: 16px;" class="bg-dark-tan padded">
                     <?= $row['party_menu_pricing']; ?>
                   </div>
                 </div>
@@ -269,7 +279,7 @@
             <!-- Controls -->
           </div>
         </div>
-        <div role="tabpanel" class="tab-pane bordered-dark" id="calendar">
+        <div role="tabpanel" class="tab-pane bordered-dark" style="padding: 0px 15px;" id="calendar">
           <?php foreach(get_field('calendar_items') as $i=>$row): ?>
             <div class="bordered-bottom-dark">
               <?= $row['calendar_item_body'] ?>
@@ -322,7 +332,7 @@
   <div>
 </section>
 <!-- MERCHANDISE  -->
-<div class="bg-banner" style="background-image: url('<?= wp_upload_dir()['url'] ; ?>/banner-filler.jpg');"></div>
+<div class="bg-banner" style="background-image: url('<?= wp_upload_dir()['url'] ; ?>/banner-2.jpg');"></div>
 <section id="merchandise" class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -335,7 +345,7 @@
         <?php foreach(get_field('merchandise') as $i=>$image): ?>
           <div class="col-xs-12 col-sm-6 col-md-3">
             <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
-            <h4 class="center-block"><?= $image['caption'] ?></p>
+            <h4 class="center-block"><?= $image['caption'] ?></h4>
           </div>
         <?php endforeach; ?>
         </div>
@@ -349,11 +359,10 @@
         <?= the_field('goods_blurb') ?>
       </div>
       <div class="row">
-       
         <?php foreach(get_field('goods') as $i=>$image): ?>
           <div class="col-xs-12 col-sm-6 col-md-3">
             <img class="center-block" src="<?php echo $image['sizes']['medium']; ?>">
-            <h4 class="center-block"><?= $image['caption'] ?></p>
+            <h4 class="center-block"><?= $image['caption'] ?></h4>
           </div>
         <?php endforeach; ?>
       </div>
@@ -373,7 +382,7 @@
           <br>
           <h4>Hours</h4>
         </div>
-        <div class="flex">
+        <div class="hours">
           <?= the_field('hours') ?>
         </div>
         <br>

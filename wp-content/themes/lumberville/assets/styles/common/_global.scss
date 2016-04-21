@@ -1,3 +1,4 @@
+$on-xs: 768px;
 $on-mobile: 992px;
 $on-medium: 1200px;
 
@@ -130,6 +131,14 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+.contact {
+  a:hover, a:focus {
+    color: $dark-tan;
+    text-decoration: none;
+
+  }
+}
+
 .text-image {
   margin-bottom: $padding-unit;
 }
@@ -166,11 +175,20 @@ a:hover, a:focus {
   padding-left: 0px;
   padding-right: 0px;
 
-  @media(max-width: $on-mobile){
+  @media(max-width: $on-xs){
     box-shadow: none;
     margin-left: -15px;
     margin-right: -15px;
+    padding-bottom: 0px;
   }
+}
+
+
+#home {
+  @media(max-width: $on-xs){
+    padding-bottom: 0px;
+  }
+
 }
 
 @media(max-width: $on-mobile){
@@ -191,6 +209,10 @@ a:hover, a:focus {
 
   img {
     margin-bottom: $padding-unit;
+  }
+
+  @media(max-width: $on-mobile){
+    margin-bottom: 0px;
   }
 
 }
@@ -312,8 +334,6 @@ hr {
   }
 
   h4:not(.title) {
-    margin-bottom: $padding-unit;
-    margin-top: $padding-unit;
   }
 
   // for price
@@ -326,13 +346,11 @@ hr {
     margin-right: -15px;
   }
 
-  #calendar div:not(:first-child) {
+  #calendar div {
     padding-top: 10px;
+    padding-bottom: 12px;
   }
 
-  #calendar div:not(:last-child) {
-    padding-bottom: 8px;
-  }
 
   ul[role='tablist'] {
     list-style-type: none;
@@ -443,6 +461,11 @@ hr {
   }
 }
 
+#lgs img {
+  display: block;
+  max-width: 100%;
+}
+
 /* Merchandise and Goods */
 
 #merchandise h4 {
@@ -472,17 +495,15 @@ hr {
     .contact {
       text-align: center;
     }
-    ul {
-      margin: auto;
+    .hours {
+      text-align: center;
     }
   }
-
 }
 
 
 form p {
   margin-bottom: 0px;
-
 }
 
 input, textarea{
@@ -500,7 +521,7 @@ input, textarea{
     0 2px 0 0 $light-tan, 
     2px 2px 0 0 $light-tan,   /* Just to fix the corner */
     2px 0 0 0 $light-tan inset, 
-    0 2px 0 0 $light-tan inset;
+    0 2px 0 0 $light-tan inset !important;
 } 
 
 textarea {
@@ -548,6 +569,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   margin-bottom: -$padding-unit;
   margin-left: $padding-unit/2;
 }
+
 div.wpcf7-validation-errors {
   border: none;
 
